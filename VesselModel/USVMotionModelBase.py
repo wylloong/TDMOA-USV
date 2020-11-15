@@ -1,7 +1,7 @@
 # 离散模型 - -  递推公式
 # 初始化：初始位置 + 初始航向
 
-from collections import deque # 引入队列，先进先出
+from collections import deque
 import math
 import matplotlib.pyplot as plt
 import VesselClass
@@ -109,39 +109,38 @@ class USVMotionModel(VesselClass.Vessels):
         return self.Current_X,self.Current_Y,self.BoatOutNew,self.velocity,self.direction
 
 if __name__=="__main__":
-    pass
-    # figure=plt.figure()
-    # ax=figure.add_subplot(111)
-    # ax.axis("equal")  # 设置图像显示的时候XY轴比例
-    # plt.grid(True)  # 添加网格
-    # plt.ion()  # interactive mode on
-    # # 运动模型初始化
-    # usvMotionModel = USVMotionModel()
-    # usvMotionModel.Ini_X = 0
-    # usvMotionModel.Ini_Y = 0
-    #
-    # usvMotionModel.UpdateInputParameters(10, 0)
-    # for x in range(300):
-    #     Curr_X,Curr_Y,boatAngleOut,speedNew,angveoli=usvMotionModel.MotionModelIteration()
-    #     ax.scatter(Curr_X,Curr_Y)
-    #     plt.pause(0.01)
-    # print("位置 X= %f ,Y=%f ,方向= %f ,速度=%f" % (Curr_X, Curr_Y, boatAngleOut, speedNew))
-    #
-    # usvMotionModel.UpdateInputParameters(20, 100)
-    # for x in range(600):
-    #     Curr_X,Curr_Y,boatAngleOut,speedNew,angveoli=usvMotionModel.MotionModelIteration()
-    #     ax.scatter(Curr_X,Curr_Y)
-    #     plt.pause(0.01)
-    # print("位置 X= %f ,Y=%f ,方向= %f ,速度=%f" % (Curr_X, Curr_Y, boatAngleOut, speedNew))
-    #
-    # usvMotionModel.UpdateInputParameters(8, -100)
-    # for x in range(600):
-    #     Curr_X,Curr_Y,boatAngleOut,speedNew,angveoli=usvMotionModel.MotionModelIteration()
-    #     ax.scatter(Curr_X,Curr_Y)
-    #     plt.pause(0.01)
-    # print("位置 X= %f ,Y=%f ,方向= %f ,速度=%f" % (Curr_X, Curr_Y, boatAngleOut, speedNew))
-    #
-    # plt.ioff() # 关闭交互模式
-    #
-    # # 界面显示
-    # plt.show()
+    figure=plt.figure()
+    ax=figure.add_subplot(111)
+    ax.axis("equal")  # 设置图像显示的时候XY轴比例
+    plt.grid(True)  # 添加网格
+    plt.ion()  # interactive mode on
+    # 运动模型初始化
+    usvMotionModel = USVMotionModel()
+    usvMotionModel.Ini_X = 0
+    usvMotionModel.Ini_Y = 0
+   
+    usvMotionModel.UpdateInputParameters(10, 0)
+    for x in range(300):
+        Curr_X,Curr_Y,boatAngleOut,speedNew,angveoli=usvMotionModel.MotionModelIteration()
+        ax.scatter(Curr_X,Curr_Y)
+        plt.pause(0.01)
+    print("位置 X= %f ,Y=%f ,方向= %f ,速度=%f" % (Curr_X, Curr_Y, boatAngleOut, speedNew))
+   
+    usvMotionModel.UpdateInputParameters(20, 100)
+    for x in range(600):
+        Curr_X,Curr_Y,boatAngleOut,speedNew,angveoli=usvMotionModel.MotionModelIteration()
+        ax.scatter(Curr_X,Curr_Y)
+        plt.pause(0.01)
+    print("位置 X= %f ,Y=%f ,方向= %f ,速度=%f" % (Curr_X, Curr_Y, boatAngleOut, speedNew))
+   
+    usvMotionModel.UpdateInputParameters(8, -100)
+    for x in range(600):
+        Curr_X,Curr_Y,boatAngleOut,speedNew,angveoli=usvMotionModel.MotionModelIteration()
+        ax.scatter(Curr_X,Curr_Y)
+        plt.pause(0.01)
+    print("位置 X= %f ,Y=%f ,方向= %f ,速度=%f" % (Curr_X, Curr_Y, boatAngleOut, speedNew))
+   
+    plt.ioff() # 关闭交互模式
+   
+    # 界面显示
+    plt.show()
