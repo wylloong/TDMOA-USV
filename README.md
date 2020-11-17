@@ -18,4 +18,4 @@ We propose a novel multiple obstacles avoidance approach for USVs called the thr
 ### Snapshots
 ![Initial Stage](https://github.com/wylloong/TDMOA-USV/blob/main/images/demo_1.png)
 
-![Overtaking & Crossing scene](https://github.com/wylloong/TDMOA-USV/blob/main/images/demo_2.png)
+![Overtaking and Crossing scene](https://github.com/wylloong/TDMOA-USV/blob/main/images/demo_2.png)
