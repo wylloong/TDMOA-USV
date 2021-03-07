@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+# This script updates the environment for building and running the current version of source code checkout.
+
+apt-get install python3-matplotlib

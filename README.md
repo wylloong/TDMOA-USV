@@ -1,6 +1,6 @@
-# TDMOA-USV
 
-## Introduction
+
+# Introduction
 
 The capability of avoiding collisions in an environment with obstacles is a necessary function for an autonomous unmanned surface vehicle (USV).
 
@@ -14,8 +14,29 @@ We propose a novel multiple obstacles avoidance approach for USVs called the thr
 - Path search module, a improved D star lite algorithm, can search an optimal local obstacle avoidance path in cycles;
 - Simulation module, integrated with a custom autonomy suite, can validate the feasibility and effectiveness of our proposed approach in tackling the multi-obstacle avoidance problem;
 
-## Simulation demo
-### Snapshots
+# Vessel Navigation Controller Module
+
+Vessel Navigation Controller Module consists of Vessel model, USV model and USV Navigation module.
+
+The navigation controller module is strongly related to the motion dynamics of a specific USV. We use the real trial data to build the Motion Model for our vessel.
+
+You need to update the Motion Model if applying to your specific USV or vessels.
+
+## How to start up?
+
+In the directory, run
+
+```
+python3 VesselModel/USVNaviControl.py
+```
+
+You will get the demo for the navigation controller, as shown below.
+
+![Navigation Controller Demo](https://github.com/wylloong/TDMOA-USV/blob/main/images/Navagation_controller_demo_1.png)
+
+# Simulation demo
+## Snapshots
+
 ![Initial Stage](https://github.com/wylloong/TDMOA-USV/blob/main/images/demo_1.png)
 
 ![Overtaking and Crossing scene](https://github.com/wylloong/TDMOA-USV/blob/main/images/demo_2.png)
