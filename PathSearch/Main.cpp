@@ -35,16 +35,13 @@ double angleDiff(double start_x, double start_y, double target_x, double target_
 		angleDiff = abs(180 - abs(angleDiff));
 	else
 		angleDiff = 360 - abs(angleDiff);
-	/*printf(" 起始点 (%f, %f) 目标点 (%f, %f) 当前点 (%f, %f) 偏移量 %f \n", start_x,  start_y,  target_x,  target_y,  curr_x,  curr_y, angleDiff);
-*/
+
 	return angleDiff;
 }
 
 int main()
 {
 	string FILENAME = "E:\\MultiEnv.txt";
-	/*const double weighttoSlope = 0.5;*/
-	// 环境变量: 设置环境大小，以及三维网格的尺寸大小
 	const double knotmile = 1852;  //m
 
 	const double USVVelocity = 16;  //kn/h
