@@ -20,12 +20,12 @@ double angleDiff(double start_x, double start_y, double target_x, double target_
 {
 	double diff_x = target_x - start_x+0.01;
 	double diff_y = target_y - start_y;
-	double slope = 360+(90-atan2(diff_y,diff_x)*180/PI);  //正北方向为轴
+	double slope = 360+(90-atan2(diff_y,diff_x)*180/PI); 
 	if (slope >= 360)
 		slope -= 360;
 	diff_x = target_x - curr_x+0.01;
 	diff_y = target_y - curr_y;
-	double curr_slope = 360 + (90 - atan2(diff_y, diff_x) * 180 / PI);  //正北方向为轴
+	double curr_slope = 360 + (90 - atan2(diff_y, diff_x) * 180 / PI);
 	if (curr_slope > 360)
 		curr_slope -= 360;
 	double angleDiff = curr_slope - slope;
@@ -239,7 +239,3 @@ int main()
 	// Push start position
 	// _real_widget->path_traversed.push_back(_planner->start());
 }
-
-
-
-
